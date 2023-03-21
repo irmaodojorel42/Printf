@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/05 20:05:22 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/05 20:05:22 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/22 13:40:28 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/22 13:40:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_print_alphabet(void)
+int main(int ac, char **av)
 {
-    char    c;
+    int i;
 
-    c = 97;
-    while (c >= 97 && c <= 122)
+    i = 0;
+    if(ac > 0)
     {
-        write(1, &c, 1);
-        c++;
-    }
+        while (av[0][i] != '\0')
+        {
+            write(1, &av[0][i], 1);
+            i++;
+        }
     write(1, "\n", 1);
+    }
+    return(0);
 }
-
-/*int main(void)
-{
-    ft_print_alphabet();
-    return (0);
-}*/

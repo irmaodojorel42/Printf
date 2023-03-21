@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/05 20:33:28 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/05 20:33:28 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/22 13:56:48 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/22 13:56:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_print_numbers(void)
+int main(int ac, char **av)
 {
-    char    a;
+    int i;
+    int j;
 
-    a = 48;
-    while (a >= 48 && a <= 57)
+    i = 0;
+    j = ac - 1;
+    if(ac == 1)
+        return(0);
+    while(j > 0)
     {
-        write(1, &a, 1);
-        a++;
+        while(av[j][i] != '\0')
+        {
+            write(1, &av[j][i], 1);
+            i++;
+        }
+        write(1, "\n", 1);
+        j--;
+        i = 0;
     }
-    write(1, "\n", 1);
+    return(0);
 }
-
-/*int main(void)
-{
-    ft_print_numbers();
-    return (0);
-}*/
