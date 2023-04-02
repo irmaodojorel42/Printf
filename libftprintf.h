@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   libprintf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/02 20:14:54 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/02 20:14:54 by marvin           ###   ########.fr       */
+/*   Created: 2023/04/02 21:04:03 by marvin            #+#    #+#             */
+/*   Updated: 2023/04/02 21:04:03 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#ifndef LIBFTPRINTF
+#define LIBFTPRINTF
 
-void    ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
+#include <unistd.h>
+
+void    ft_putnbr(int c);
+void    ft_putchar(char c);
+void    ft_putstr(char *s);
+
+#endif
