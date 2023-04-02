@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   libprintf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/22 13:56:48 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/22 13:56:48 by marvin           ###   ########.fr       */
+/*   Created: 2023/04/02 21:04:03 by marvin            #+#    #+#             */
+/*   Updated: 2023/04/02 21:04:03 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef LIBPRINTF
+#define LIBPRINTF
+
 #include <unistd.h>
 
-int main(int ac, char **av)
-{
-    int i;
-    int j;
+void    ft_putnbr(int c);
+void    ft_putchar(char c);
+void    ft_putstr(char *s);
 
-    i = 0;
-    j = ac - 1;
-    if(ac == 1)
-        return(0);
-    while(j > 0)
-    {
-        while(av[j][i] != '\0')
-        {
-            write(1, &av[j][i], 1);
-            i++;
-        }
-        write(1, "\n", 1);
-        j--;
-        i = 0;
-    }
-    return(0);
-}
+#endif

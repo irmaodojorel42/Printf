@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/22 13:40:28 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/22 13:40:28 by marvin           ###   ########.fr       */
+/*   Created: 2023/04/02 20:27:42 by marvin            #+#    #+#             */
+/*   Updated: 2023/04/02 20:27:42 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libprintf.h"
 
-int main(int ac, char **av)
+void    ft_putnbr(int c)
 {
-    int i;
-
-    i = 0;
-    if(ac > 0)
+    if(c == -2147483648)
     {
-        while (av[0][i] != '\0')
-        {
-            write(1, &av[0][i], 1);
-            i++;
-        }
-    write(1, "\n", 1);
+        write(1, "-2147483648", 12);
+        return;
     }
-    return(0);
+    else if(c < 0)
+    {
+        ft_putchar('-');
+        ft_putnbr(-c);
+    }
+    else if(c > 9)
+    {
+        ft_putnbr(c / 10);
+        ft_putnbr(c % 10);
+    }
+    else
+        ft_putchar(c + '0');
 }
