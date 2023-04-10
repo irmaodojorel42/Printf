@@ -12,17 +12,17 @@
 
 #include "ft_printf.h"
 
-int ft_uint(unsigned int n)
+int	ft_uint(unsigned int n)
 {
-    int c;
+	int	c;
 
-    c = 0;
-    if(n >= 10)
-    {
-        c += ft_uint(n / 10);
-        c += ft_uint(n % 10);
-    }
-    else
-        c += ft_putchar(n + '0');
-    return(c);
+	c = 0;
+	if (n >= 10)
+	{
+		c += ft_uint(n / 10);
+		c += ft_uint(n % 10);
+	}
+	else
+		c += ft_putchar(n + '0');
+	return (c);
 }
