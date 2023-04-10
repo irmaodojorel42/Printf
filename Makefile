@@ -10,13 +10,16 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libprintf.a
+.SILENT:
+
+NAME = libftprintf.a
 
 CC = gcc
 
 FLAGS = -Wall -Werror -Wextra
 
-SRC =	ft_putchar.c ft_putnbr.c ft_putstr.c
+SRC =	ft_putchar.c ft_putnbr.c ft_putstr.c \
+		ft_printf.c ft_hexadec.c ft_uint.c
 
 SRCO = $(SRC:.c=.o)
 
@@ -37,6 +40,11 @@ fclean:	clean
 
 re:	fclean all
 
-run:	re
+link:	re
 		$(RM) result
-		$(CC) -o result main.c -L. -lprintf
+		$(CC) $(FLAGS) -o result main.c -L. -lftprintf
+
+run:	link
+		./result
+		$(RM) result
+
