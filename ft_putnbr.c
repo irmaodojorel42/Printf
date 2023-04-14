@@ -22,15 +22,15 @@ int	ft_putnbr(int n)
 		c += ft_putstr("-2147483648");
 		return (c);
 	}
-	else if (n < 0)
+	if (n < 0)
 	{
 		c += ft_putchar('-');
-		ft_putnbr(-n);
+		n = -n;
 	}
-	else if (n > 9)
+	if (n > 9)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		c += ft_putnbr(n / 10);
+		c += ft_putnbr(n % 10);
 	}
 	else
 		c += ft_putchar(n + '0');

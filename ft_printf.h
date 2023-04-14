@@ -26,5 +26,6 @@ int	ft_putstr(char *s);
 int	ft_uint(unsigned int n);
 int	ft_hexadec(unsigned long n, int x);
 int	ft_printf(const char *format, ...);
+int	ft_check(unsigned long int n, int type);
 
 #endif

@@ -19,21 +19,18 @@ static int	ft_formatype(char type, va_list args)
 	c = 0;
 	if (type == '%')
 		c += ft_putchar('%');
-	if (type == 'd' || type == 'i')
+	else if (type == 'd' || type == 'i')
 		c += ft_putnbr(va_arg(args, int));
-	if (type == 'c')
+	else if (type == 'c')
 		c += ft_putchar(va_arg(args, int));
-	if (type == 's')
+	else if (type == 's')
 		c += ft_putstr(va_arg(args, char *));
-	if (type == 'x' || type == 'X')
+	else if (type == 'x' || type == 'X')
 		c += ft_hexadec(va_arg(args, unsigned int), type);
-	if (type == 'u')
+	else if (type == 'u')
 		c += ft_uint(va_arg(args, unsigned int));
-	if (type == 'p')
-	{
-		c += ft_putstr("0x");
-		c += ft_hexadec(va_arg(args, unsigned long int), 'p');
-	}
+	else if (type == 'p')
+		c += ft_check(va_arg(args, unsigned long int), 'p');
 	return (c);
 }
 
