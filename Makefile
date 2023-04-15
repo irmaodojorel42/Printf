@@ -10,13 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-.SILENT:
+#.SILENT:
 
 NAME = libftprintf.a
 
-CC = gcc
+CC = cc
 
-FLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
 SRC =	ft_putchar.c ft_putnbr.c ft_putstr.c \
 		ft_printf.c ft_hexadec.c ft_uint.c
@@ -48,3 +48,4 @@ run:	link
 		./result
 		$(RM) result
 
+.PHONY: all clean fclean re link run
