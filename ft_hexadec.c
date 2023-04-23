@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hexadec.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ceribeir <ceribeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/09 20:20:14 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/09 20:20:14 by marvin           ###   ########.fr       */
+/*   Created: 2023/04/23 22:26:54 by ceribeir          #+#    #+#             */
+/*   Updated: 2023/04/23 22:26:54 by ceribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,3 +46,4 @@ int	ft_hexadec(unsigned long int n, int type)
 		c += ft_putchar(p[n]);
 	return (c);
 }
+a

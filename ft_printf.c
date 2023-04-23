@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ceribeir <ceribeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/09 14:49:45 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/09 14:49:45 by marvin           ###   ########.fr       */
+/*   Created: 2023/04/23 22:27:06 by ceribeir          #+#    #+#             */
+/*   Updated: 2023/04/23 22:27:06 by ceribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,4 @@ int	ft_printf(const char *format, ...)
 	}
 	return (c);
 }
+a

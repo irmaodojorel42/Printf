@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ceribeir <ceribeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/02 20:14:54 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/02 20:14:54 by marvin           ###   ########.fr       */
+/*   Created: 2023/04/23 22:27:24 by ceribeir          #+#    #+#             */
+/*   Updated: 2023/04/23 22:27:24 by ceribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,3 +17,4 @@ int	ft_putchar(char c)
 	write(1, &c, 1);
 	return (1);
 }
+a
