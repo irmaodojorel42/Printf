@@ -28,4 +28,3 @@ int	ft_putstr(char *s)
 	}
 	return (c);
 }
-a

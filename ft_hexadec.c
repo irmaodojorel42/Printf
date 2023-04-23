@@ -46,4 +46,3 @@ int	ft_hexadec(unsigned long int n, int type)
 		c += ft_putchar(p[n]);
 	return (c);
 }
-a

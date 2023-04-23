@@ -26,4 +26,3 @@ int	ft_uint(unsigned int n)
 		c += ft_putchar(n + '0');
 	return (c);
 }
-a

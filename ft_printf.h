@@ -29,4 +29,3 @@ int	ft_printf(const char *format, ...);
 int	ft_check(unsigned long int n, int type);
 
 #endif
-a

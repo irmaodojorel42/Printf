@@ -36,4 +36,3 @@ int	ft_putnbr(int n)
 		c += ft_putchar(n + '0');
 	return (c);
 }
-a
