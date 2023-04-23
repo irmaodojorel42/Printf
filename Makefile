@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: ceribeir <ceribeir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/02 20:41:31 by marvin            #+#    #+#              #
-#    Updated: 2023/04/02 20:41:31 by marvin           ###   ########.fr        #
+#    Created: 2023/04/23 22:28:00 by ceribeir          #+#    #+#              #
+#    Updated: 2023/04/23 22:28:00 by ceribeir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#.SILENT:
+.SILENT:
 
 NAME = libftprintf.a
 
@@ -29,11 +29,13 @@ RM = rm -f
 
 $(NAME):	$(SRCO)
 			$(CME) $(NAME) $(SRCO)
+	@echo "Compile Done"
 
 all: $(NAME)
 
 clean:
 		$(RM) $(SRCO)
+	@echo "Revome Done"
 
 fclean:	clean
 		$(RM) $(NAME)
